@@ -42,8 +42,6 @@ const handleOnChange = (e) => {
       let ndata = dataSource.filter(data => data.title.toLowerCase() === searchTerm.toLowerCase())
       console.log(ndata);
       setMovies(ndata);
-
-
 }
 
 // Sort by vote rating order
@@ -70,7 +68,7 @@ return (
           value = {searchTerm}
           onChange={handleOnChange}
         />
-      </form>
+     
       {/*  Rating Sort field container*/}
       <div className = "sorting">
       <label>Rating</label>
@@ -78,10 +76,9 @@ return (
           <option value="" disabled selected></option>
           <option>Ascending</option>
           <option>Descending</option>
-          
-           
-        </select>
+          </select>
      </div>
+      </form>
      </header>
 {/* links to all container for parameters in the view */}
     <div className="movie-container">
