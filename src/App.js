@@ -60,7 +60,7 @@ return (
       </form>
       {/*  Rating Sort field container*/}
       <div className = "sorting">
-      <label>Ratings</label>
+      <label>ratings</label>
        <select style={{width:200, height:40, borderRadius:3}}>
           <option value="" disabled selected></option>
           <option>Ascending</option>
