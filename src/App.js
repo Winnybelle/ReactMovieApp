@@ -14,7 +14,8 @@ function App() {
   //arrays and variables in hook format
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [dataSource, setDataSource] = useState([])
+  const [dataSource, setDataSource] = useState([]);
+  const [Rating, setRating] = useState('');
 
   //Get JSON data from API using API Key
     useEffect(() => {
@@ -44,6 +45,18 @@ const handleOnChange = (e) => {
 
 
 }
+
+// Sort by vote rating order
+const handleRatingOnChange = (e) =>{
+  setRating(e.target.value);
+  if (e.target.value === 'Ascending'){
+      dataSource.sort(function (a, b) {return a.vote_average - b.vote_average})
+   } else if (e.target.value === 'Descending'){
+      dataSource.sort(function (a, b) {return b.vote_average - a.vote_average})
+   } else{
+
+   }
+}
   
 return (
    <>
@@ -53,18 +66,20 @@ return (
         <input 
           className="search" 
           type="text" 
-          placeholder="...Search"
+          placeholder="Search..."
           value = {searchTerm}
           onChange={handleOnChange}
         />
       </form>
       {/*  Rating Sort field container*/}
       <div className = "sorting">
-      <label>ratings</label>
-       <select style={{width:200, height:40, borderRadius:3}}>
+      <label>Rating</label>
+       <select onChange={handleRatingOnChange}  style={{width:200, height:40, borderRadius:3}}>
           <option value="" disabled selected></option>
           <option>Ascending</option>
-          <option>Descending</option> 
+          <option>Descending</option>
+          
+           
         </select>
      </div>
      </header>
