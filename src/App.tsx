@@ -75,7 +75,7 @@ return (
       <div className = "sorting">
       <label>Rating</label>
        <select onChange={handleRatingOnChange}  style={{width:200, height:40, borderRadius:3}}>
-          <option value="" disabled selected>sorting...</option>
+          <option value="" disabled selected>sort by rating..</option>
           <option>Ascending</option>
           <option>Descending</option>
           </select>
