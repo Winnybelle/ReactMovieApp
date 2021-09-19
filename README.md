@@ -1,2 +1,1 @@
-App Summary
 In this React/Typescript movie application, I fetched a list of comedy movies from TMDB's API. After successfully fetching the TMDB API data I needed and testing it with postman(an API testing tool), I then went on to create react components to carry out this task and display those movies as a list. This list is sortable by rating and filterable by movie title all without hitting the API again. Viewable on mobile, desktops and tablets. App still needs some little touches
