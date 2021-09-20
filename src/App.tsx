@@ -2,7 +2,6 @@ import * as React from "react"
 import './index.css';
 import Movie from './Components/Movie';
 import {useState, useEffect} from 'react'
-// import { useMediaPredicate } from "react-media-hook";
 
 
 //TMDB API Data fetched with generated API Key. Note Comedy Genre = 35
