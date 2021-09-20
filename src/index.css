@@ -22,25 +22,35 @@ body {
 
 /* section contains the search bar and select dropdown */
 .header {
-  background-color: #373b69;
   padding: 1rem;
   display: flex;
   justify-content: flex-end;
 }
+ form {
+   display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
 .search{
   margin-top: 20px;
   font-family: inherit;
   border: 2px solid #22220b;
-  width: 200px;
+  border-radius: 5px;
+  width: 300px;
   font-size:1.2rem;
   background-color:#fff;
   padding: 0.5rem 1.5rem;
   color: #22254b;
 }
 
-.sorting {
-  margin-top:-40px;
-  margin-left: 250px;
+.sorting  select {
+  margin-top: 20px;
+  margin-left: 30px;
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
 }
 
 /* movies image display container section */
@@ -95,5 +105,52 @@ body {
 .movie:hover .movie-over {
   transform: translateY(0%);
 }
+
+/* Media query for responsiveness */
+@media only screen and (min-width:584px ) {
+  form {
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search {
+    width: 280px;
+    margin-right: 100px;
+
+  }
+  
+ .sorting select {
+    width: 280px;
+    margin-left: -80px;
+  }
+  
+}
+
+
+@media only screen and (max-width: 600px) {
+  header {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  form {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search {
+    width: 150px;
+    margin-right: 100px;
+  }
+  
+ .sorting select {
+    width: 150px;
+    margin-left: -80px;
+  }
+}
+
 
 

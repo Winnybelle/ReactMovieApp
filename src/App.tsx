@@ -73,8 +73,7 @@ return (
      
       {/*  Rating Sort field container*/}
       <div className = "sorting">
-      <label>Rating</label>
-       <select onChange={handleRatingOnChange}  style={{width:200, height:40, borderRadius:3}}>
+       <select onChange={handleRatingOnChange}>
           <option value="" disabled selected>sort by rating..</option>
           <option>Ascending</option>
           <option>Descending</option>
